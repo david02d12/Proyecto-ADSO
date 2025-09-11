@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cliente - Solicitar Servicio</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Celuaccel</h1>
+    <div class="auth-info">
+      <span>Hola, Cliente Ejemplo</span>
+      <a href="publico.html"><button>Cerrar Sesión</button></a>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Menú Cliente</h2>
+      <ul>
+        <li><a href="catalogo.html">Catálogo Privado</a></li>
+        <li><a href="servicio.html" class="active">Solicitar Servicio</a></li>
+        <li><a href="estado.html">Estado del Servicio</a></li>
+        <li><a href="historial.html">Historial</a></li>
+        <li><a href="notificaciones.html">Notificaciones</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-dashboard">
+      <h2>Solicitar un Servicio</h2>
+      <form>
+        <div class="form-group">
+          <label for="device">Dispositivo:</label>
+          <input type="text" id="device" placeholder="Ej: iPhone 13">
+        </div>
+        <div class="form-group">
+          <label for="description">Descripción del problema:</label>
+          <textarea id="description" rows="5"></textarea>
+        </div>
+        <button type="submit">Generar Ticket</button>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
