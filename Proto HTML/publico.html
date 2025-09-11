@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celuaccel - Catálogo Público</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Celuaccel</h1>
+    <div class="auth-info">
+   
+      <a href="login.html"><button>Iniciar Sesión</button></a>
+
+    </div>
+  </header>
+
+  <!-- Catálogo público -->
+  <main class="main-content container">
+    <h2>Catálogo de Productos</h2>
+    <p>Conoce los últimos accesorios que ofrecemos.</p>
+
+    <div class="catalog-grid">
+      <div class="card">
+        <img src="https://placehold.co/400x400/dc2626/ffffff?text=Cargador" alt="Cargador Rápido USB-C">
+        <h3>Cargador Rápido USB-C</h3>
+        <p>Carga tu dispositivo al 50% en 30 minutos.</p>
+        <p><strong>$29</strong></p>
+      </div>
+
+      <div class="card">
+        <img src="https://placehold.co/400x400/dc2626/ffffff?text=Funda" alt="Funda de Silicona">
+        <h3>Funda de Silicona</h3>
+        <p>Protección ligera y suave para tu móvil.</p>
+        <p><strong>$15</strong></p>
+      </div>
+
+      <div class="card">
+        <img src="https://placehold.co/400x400/dc2626/ffffff?text=Vidrio" alt="Vidrio Templado 9H">
+        <h3>Vidrio Templado 9H</h3>
+        <p>Defensa máxima contra rasguños y golpes.</p>
+        <p><strong>$10</strong></p>
+      </div>
+
+      <div class="card">
+        <img src="https://placehold.co/400x400/dc2626/ffffff?text=Bateria" alt="Batería Externa 10000mAh">
+        <h3>Batería Externa 10000mAh</h3>
+        <p>Carga tu móvil hasta 3 veces fuera de casa.</p>
+        <p><strong>$45</strong></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal de login (estático) -->
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>Iniciar Sesión</h2>
+
+      <form>
+        <div class="form-group">
+          <label for="email">Usuario:</label>
+          <input type="text" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <p class="text-sm">
+          <strong>Credenciales de prueba:</strong><br>
+          Usuario: cliente, tecnico o admin<br>
+          Contraseña: 123
+        </p>
+
+        <button type="submit" class="btn">Acceder</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
