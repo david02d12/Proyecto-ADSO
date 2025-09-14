@@ -1,3 +1,4 @@
+
      :root {
             --primary-color: #dc2626;
             --secondary-color: #1f2937;
@@ -416,6 +417,31 @@
         .notifications li {
             padding: 0.5rem 0;
             border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .notifications li:last-child {
+            border-bottom: none;
+        }
+.loguin-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .login-actions button {
+            background-color: var(--text-light);
+            color: var(--primary-color);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .login-actions button:hover {
+            background-color: #b91c1c;
         }
         
         .notifications li:last-child {
