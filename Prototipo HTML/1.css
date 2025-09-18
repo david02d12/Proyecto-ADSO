@@ -189,11 +189,15 @@
             outline: none;
             border-color: var(--primary-color);
         }
-        
+
+           
         .dashboard-container {
             display: flex;
             flex-direction: column;
+             margin: 0; 
+             width: 100%;
         }
+        
 
         .sidebar {
             background-color: var(--secondary-color);
@@ -230,10 +234,11 @@
             padding-left: 0;
         }
 
-        @media (min-width: 768px) {
+        @media  (min-width: 768px) {
             .dashboard-container {
                 flex-direction: row;
                 gap: 2rem;
+                width: 100%;
             }
             .sidebar {
                 display: flex;
@@ -442,8 +447,4 @@
         
         .login-actions button:hover {
             background-color: #b91c1c;
-        }
-        
-        .notifications li:last-child {
-            border-bottom: none;
         }
