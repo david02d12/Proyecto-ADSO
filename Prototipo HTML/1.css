@@ -237,7 +237,7 @@
         @media  (min-width: 768px) {
             .dashboard-container {
                 flex-direction: row;
-                gap: 2rem;
+                gap: 4rem;
                 width: 100%;
             }
             .sidebar {
@@ -249,24 +249,47 @@
                 padding-left: 1rem;
             }
         }
-        
-        .progress-bar-container {
-            width: 100%;
-            background-color: #e5e7eb;
-            border-radius: 9999px;
-            height: 1.5rem;
-            margin: 1rem 0;
-            overflow: hidden;
+        @media  (min-width: 768px) {
+            .main-dashboard {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                width: auto;
+            }
+            .dashboard-container {
+                    padding-left: 10rem;
+                padding-right: 10rem;
+                width: auto;
+            }
+            .sidebar {
+                padding-left: 0rem;
+                padding-right: 2rem;
+                width: auto;
+        }
+            .card{
+                padding: 0rem;
+                padding-left: 0rem;
+                padding-right: 0rem;
+                width: auto;
         }
         
-        .progress-bar {
-            height: 100%;
-            border-radius: 9999px;
-            transition: width 0.5s ease, background-color 0.5s ease;
+    }
+            .progress-bar-container {
+                width: 100%;
+                background-color: #e5e7eb;
+                border-radius: 9999px;
+                height: 1.5rem;
+                margin: 1rem 0;
+                overflow: hidden;
         }
         
-        .progress-bar.pendiente {
-            background-color: #fcd34d;
+            .progress-bar {
+               height: 100%;
+               border-radius: 9999px;
+               transition: width 0.5s ease, background-color 0.5s ease;
+        }
+        
+            .progress-bar.pendiente {
+               background-color: #fcd34d;
         }
         
         .progress-bar.en-progreso {
@@ -446,5 +469,5 @@
         }
         
         .login-actions button:hover {
-            background-color: #b91c1c;
+            background-color: var(--text-dark);
         }
