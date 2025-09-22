@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Añadir Producto</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Celuaccel</h1>
+    <div class="auth-info">
+      <span>Hola, Administrador Claudia</span>
+      <a href="publico.html"><button>Cerrar Sesión</button></a>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Menú Administrador</h2>
+      <ul>
+        <li><a href="admin.html">Estadísticas</a></li>
+        <li><a href="ausuarios.html">Gestión de Usuarios</a></li>
+        <li><a href="aproductos.html" class="active">Gestión de Productos</a></li>
+        <li><a href="ainventario.html">Gestión de Inventario</a></li>
+        <li><a href="ahistorial.html">Historial de Servicios</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-dashboard">
+      <h2>Añadir Producto</h2>
+      <form>
+        <label>Nombre del Producto:</label><br>
+        <input type="text" name="nombre"><br><br>
+
+        <label>Precio:</label><br>
+        <input type="text" name="precio"><br><br>
+
+        <label>Descripción:</label><br>
+        <textarea name="descripcion"></textarea><br><br>
+
+        <button class="btn">Guardar</button>
+        <a href="aproductos.html"><button type="button" class="btn btn2">Cancelar</button></a>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

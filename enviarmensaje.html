@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cliente - Enviar Mensaje</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Celuaccel</h1>
+    <div class="auth-info">
+      <span>Hola, Cliente Ejemplo</span>
+      <a href="publico.html"><button>Cerrar Sesión</button></a>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Menú Cliente</h2>
+      <ul>
+        <li><a href="catalogo.html">Catálogo Privado</a></li>
+        <li><a href="servicio.html">Solicitar Servicio</a></li>
+        <li><a href="estado.html" class="active">Estado del Servicio</a></li>
+        <li><a href="historial.html">Historial</a></li>
+        <li><a href="notificaciones.html">Notificaciones</a></li>
+        <li><a href="perfilcliente.html">Perfil de Usuario</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-dashboard">
+      <h2>Estado del Servicio</h2>
+      <p>Dispositivo: <strong>iPhone X</strong></p>
+      <p>Estado actual: <strong>En Progreso</strong></p>
+
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width:50%"></div>
+      </div>
+
+      <p>Diagnóstico: <em>Reemplazo de pantalla.</em></p>
+
+      <h3>Chat con Técnico</h3>
+		<div class="chat-messages">
+		  <div class="chat-message me">
+			Hola, ¿cómo va el progreso?
+			<div class="chat-actions">
+			  <a href="editarmensaje.html"><button class="btn">Editar</button></a>
+			  <a href="eliminarmensaje.html"><button class="btn btn2">Eliminar</button></a>
+			</div>
+		  </div>
+		  <div class="chat-message other">
+			Hola. El diagnóstico está completo, ya estamos reemplazando la pieza.
+		  </div>
+		  <div class="chat-message me">
+			Gracias
+			<div class="chat-actions">
+			  <a href="editarmensaje.html"><button class="btn">Editar</button></a>
+			  <a href="eliminarmensaje.html"><button class="btn btn2">Eliminar</button></a>
+			</div>
+		  </div>
+		</div>
+      <div class="chat-input">
+        <input type="text" placeholder="Escribe un mensaje...">
+        <button class="btn">Enviar</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
