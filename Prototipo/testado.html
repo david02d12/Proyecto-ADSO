@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Técnico - Estado del Servicio</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Celuaccel</h1>
+    <div class="auth-info">
+      <span>Hola, Técnico Andrés</span>
+      <a href="index.html"><button>Cerrar Sesión</button></a>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Menú Técnico</h2>
+      <ul>
+        <li><a href="tsolicitudes.html">Solicitudes Pendientes</a></li>
+        <li><a href="tservicios.html">Mis Servicios</a></li>
+        <li><a href="tinventario.html">Inventario</a></li>
+        <li><a href="thistorial.html">Historial</a></li>
+		<li><a href="perfiltecnico.html">Perfil Usuario</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-dashboard">
+      <h2>Servicio Asignado</h2>
+      <p>Cliente: <strong>Cliente Ejemplo</strong></p>
+      <p>Dispositivo: <strong>iPhone X</strong></p>
+      <p>Estado actual: <strong>En Progreso</strong></p>
+
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width:50%"></div>
+      </div>
+
+      <p>Diagnóstico: <em>Reemplazo de pantalla.</em></p>
+
+      <h3>Chat con Cliente</h3>
+      <div class="chat-messages">
+        <div class="chat-message other">Hola, ¿cómo va el progreso?</div>
+        <div class="chat-message me">
+          El diagnóstico está completo, ya estamos reemplazando la pieza.
+          <div class="chat-actions">
+            <a href="teditarmensaje.html"><button class="btn">Editar</button></a>
+            <a href="teliminarmensaje.html"><button class="btn btn2">Eliminar</button></a>
+          </div>
+        </div>
+        <div class="chat-message other">Gracias</div>
+      </div>
+
+      <div class="chat-input">
+        <input type="text" placeholder="Escribe una respuesta...">
+        <a href="tenviarmensaje.html"><button class="btn">Enviar</button></a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

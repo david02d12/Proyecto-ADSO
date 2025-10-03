@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Perfil</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Celuaccel</h1>
+    <div class="auth-info">
+      <span>Hola, Cliente Ejemplo</span>
+      <a href="index.html"><button>Cerrar Sesión</button></a>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Menú Cliente</h2>
+      <ul>
+        <li><a href="catalogo.html">Catálogo Privado</a></li>
+        <li><a href="servicio.html">Solicitar Servicio</a></li>
+        <li><a href="estado.html">Estado del Servicio</a></li>
+        <li><a href="historial.html">Historial</a></li>
+        <li><a href="notificaciones.html">Notificaciones</a></li>
+        <li><a href="perfilcliente.html">Perfil de Usuario</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-dashboard">
+      <h2>Editar Perfil</h2>
+		<form action="cactual.html" method="post" class="formulario-perfil">
+		  <label>Nombre:</label><br>
+		  <input type="text" class="chat-input" name="nombre" value="Cliente Ejemplo" required><br><br>
+
+		  <label>Correo:</label><br>
+		  <input type="email" class="chat-input" name="correo" value="cliente@ejemplo.com" required><br><br>
+
+		  <label>Teléfono:</label><br>
+		  <input type="tel" class="chat-input" name="telefono" value="+57 300 123 4567"><br><br>
+
+		  <label>Dirección:</label><br>
+		  <input type="text" class="chat-input" name="direccion" value="Calle Ficticia #123, San Antonio, Cundinamarca"><br><br>
+
+		  <label>Fecha de Nacimiento:</label><br>
+		  <input type="date" class="chat-input" name="nacimiento" value="2001-01-10"><br><br>
+
+		  <button type="submit">Guardar Cambios</button>
+		</form>
+    </main>
+  </div>
+</body>
+</html>

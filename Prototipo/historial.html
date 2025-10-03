@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cliente - Historial</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Celuaccel</h1>
+    <div class="auth-info">
+      <span>Hola, Cliente Ejemplo</span>
+      <a href="index.html"><button>Cerrar Sesión</button></a>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Menú Cliente</h2>
+      <ul>
+        <li><a href="catalogo.html">Catálogo Privado</a></li>
+        <li><a href="servicio.html">Solicitar Servicio</a></li>
+        <li><a href="estado.html">Estado del Servicio</a></li>
+        <li><a href="historial.html" class="active">Historial</a></li>
+        <li><a href="notificaciones.html">Notificaciones</a></li>
+		<li><a href="perfilcliente.html">Perfil de Usuario</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-dashboard">
+      <h2>Historial de Servicios</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+			<th>Dispositivo</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+            <th>Calificación</th>
+            <th>Comentarios</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+			<td>17/09/2025</td>
+			<td>iPhone X</td>
+            <td>Pantalla rota</td>
+            <td>En Progreso</td>
+            <td>N/A</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>15/09/2025</td>
+			<td>Samsung S10</td>
+            <td>No carga</td>
+            <td>Completado</td>
+            <td>★★★★☆</td>
+            <td>Excelente servicio, muy rápido.</td>
+          </tr>
+        </tbody>
+      </table>
+	  <div class="download-report" style="margin-top: 20px; text-align: right;">
+        <a class="btn">Descargar Historial PDF</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Técnico - Solicitudes Pendientes</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Celuaccel</h1>
+    <div class="auth-info">
+      <span>Hola, Técnico Andrés</span>
+      <a href="index.html"><button>Cerrar Sesión</button></a>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Menú Técnico</h2>
+      <ul>
+        <li><a href="tsolicitudes.html" class="active">Solicitudes Pendientes</a></li>
+        <li><a href="tservicios.html">Mis Servicios</a></li>
+        <li><a href="tinventario.html">Inventario</a></li>
+        <li><a href="thistorial.html">Historial</a></li>
+		<li><a href="perfiltecnico.html">Perfil Usuario</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-dashboard">
+      <h2>Solicitudes Pendientes</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Dispositivo</th>
+            <th>Descripción</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td>Xiaomi Mi 9</td>
+            <td>Se apaga solo</td>
+            <td><button class="btn">Asignar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+</body>
+</html>

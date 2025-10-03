@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Perfil Técnico</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Celuaccel</h1>
+    <div class="auth-info">
+      <span>Hola, Técnico Andrés</span>
+      <a href="index.html"><button>Cerrar Sesión</button></a>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Menú Técnico</h2>
+      <ul>
+        <li><a href="tsolicitudes.html">Solicitudes Pendientes</a></li>
+        <li><a href="tservicios.html">Mis Servicios</a></li>
+        <li><a href="tinventario.html">Inventario</a></li>
+        <li><a href="thistorial.html">Historial</a></li>
+		<li><a href="perfiltecnico.html">Perfil Usuario</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-dashboard">
+      <h2>Editar Perfil Técnico</h2>
+	<form action="tactual.html" method="post" class="formulario-perfil">
+	  <label>Nombre:</label><br>
+	  <input type="text" class="chat-input" name="nombre" value="Técnico Andrés" required><br><br>
+
+	  <label>Correo:</label><br>
+	  <input type="email" class="chat-input" name="correo" value="tecnico@celuaccel.com" required><br><br>
+
+	  <label>Teléfono:</label><br>
+	  <input type="tel" class="chat-input" name="telefono" value="+57 310 456 7890"><br><br>
+
+	  <label>Especialidad:</label><br>
+	  <input type="text" class="chat-input" name="especialidad" value="Reparación de hardware y diagnóstico de software"><br><br>
+
+	  <button type="submit" class="btn">Guardar Cambios</button>
+	</form>
+    </main>
+  </div>
+</body>
+</html>
