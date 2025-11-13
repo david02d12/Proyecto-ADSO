@@ -37,3 +37,8 @@ Route::get('/categoria/{documento}/edit', [CategoriaController::class, 'edit'])-
 Route::put('/categoria/{documento}', [CategoriaController::class, 'update'])->name('categoria.update');
 Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name('categoria.destroy');
 
+Route::get('/chat',[ChatController::class,"index"])->name("chat.index");
+Route::post('/chat',[ChatController::class,"store"])->name("chat.store");
+Route::get('/chat/{documento}/edit', [ChatController::class, 'edit'])->name('chat.edit');
+Route::put('/chat/{documento}', [ChatController::class, 'update'])->name('chat.update');
+Route::delete('/chat/{id}', [ChatController::class, 'destroy'])->name('chat.destroy');
