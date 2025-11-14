@@ -15,15 +15,11 @@ class ProductoController extends Controller
 
         if($search){
             $query->where(function($q) use ($search){
-                $q->where('Codigo_Procuto', 'LIKE', "%{$search}%")
+                $q->where('Codigo_Producto', 'LIKE', "%{$search}%")
                 ->orwhere('Nombre', 'LIKE', "%{$search}%")
-                ->orwhere('Precio','LIKE', "%{$search}");
-                ->orwhere('Descripcion','LIKE', "%{$search}");
-                ->orwhere('ID_Categoria','LIKE', "%{$search}");
-                ->orwhere('Cantidad','LIKE', "%{$search}");
-                ->orwhere('Activo_Catalogo','LIKE', "%{$search}");
-
-            });
+                ->orwhere('Descripcion','LIKE',"%{$search}%");
+            
+        });
         }
         $datos = $query->paginate(10);
         return view("producto")->with("datos", $datos);
@@ -32,49 +28,48 @@ class ProductoController extends Controller
     //Insertar Datos
     public function store(Request $request){
         $request->validate([
-            'Categoria_Producto' => 'required|unique:producto,Codigo_Producto',
+            'Codigo_Producto' => 'required|unique:producto,Codigo_Producto',
             'Cantidad' => 'required|numeric',
             'Nombre' => 'required',
             'Precio' => 'required|numeric',
             'Descripcion' => 'required',
             'Imagen' => 'required',
             'Activo_Catalogo' => 'required',
-            'ID_Categoria' => 'required|numeric',
+            'ID_Categoria' => 'required'
         ],[
-            'Codigo_Producto.unique' => 'El producto con esta Descripcion ya existe en la plataforma.',
+            'Codigo_Producto.unique' => 'El Producto con esta descripcion ya existe en la plataforma.',
         ]);
 
-        UsuarioModelo::create($request->all());
+        ProductoModelo::create($request->all());
         return redirect()->route('producto.index')->with('success','Producto Registrado en la Plataforma');
     }
 
     //Udate
-    public function update(Request $request, $Codigo_Producto){
+    public function update(Request $request, $ID_Categoria){
         $request->validate([
             'Codigo_Producto' => 'required|unique:producto,Codigo_Producto,'. $ID_Categoria . ',Codigo_Producto',
-            'Cantidad' => 'required',
+            'Cantidad' => 'required|numeric',
             'Nombre' => 'required',
             'Precio' => 'required|numeric',
             'Descripcion' => 'required',
             'Imagen' => 'required',
             'Activo_Catalogo' => 'required',
-            'ID_Categoria' => 'required|numeric',
-
+            'ID_Categoria' => 'required'
         ],[
-            'Codigo_Producto.unique' => 'El producto con esta descripcion ya existe en la plataforma.',
+            'Codigo_Producto.unique' => 'El Producto con esta descripcion ya existe en la plataforma.',
         ]);
-        $producto = ProductoModelo::findOrFail($Codigo_Producto);
+        $producto = ProductoModelo::findOrFail($ID_Categoria);
         $producto->update([
             'Codigo_Producto' => $request->Codigo_Producto,
             'Cantidad' => $request->Cantidad,
             'Nombre' => $request->Nombre,
-            'Precio' => $request->Precio,
             'Descripcion' => $request->Descripcion,
             'Imagen' => $request->Imagen,
+            'Precio' => $request->Precio,
             'Activo_Catalogo' => $request->Activo_Catalogo,
-            'ID_Categoria' => $request->ID_Categoria,
+            'ID_Catalogo' => $request->ID_Catalogo,
         ]);
-           return redirect()->route('producto.index')->with('success','El Producto ha sido actualizado en la Plataforma');
+           return redirect()->route('producto.index')->with('success','Producto Actualizado en la Plataforma');
 
     }
     // Eliminar
