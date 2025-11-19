@@ -16,8 +16,8 @@ class NotificacionesController extends Controller
         if($search){
             $query->where(function($q) use ($search){
                 $q->where('Codigo_Notificaciones', 'LIKE', "%{$search}%")
-                ->orwhere('Tipo_NOtificacion', 'LIKE', "%{$search}%");
-
+                // Se corrigió a 'Tipo_Notificacion' con mayúscula
+                ->orwhere('Tipo_Notificacion', 'LIKE', "%{$search}%"); 
             });
         }
         $datos = $query->paginate(10);
@@ -30,36 +30,41 @@ class NotificacionesController extends Controller
             'Codigo_Notificaciones' => 'required|unique:notificaciones,Codigo_Notificaciones',
             'Tipo_Notificacion' => 'required',
         ],[
-            'Tipo_Notificacion.unique' => 'La Notificacion de este tipo ya existe en la plataforma.',
+            // Corregida la clave de mensaje de error
+            'Codigo_Notificaciones.unique' => 'El código de notificación ya existe.',
+            'Tipo_Notificacion.required' => 'El tipo de notificación es obligatorio.',
         ]);
 
         NotificacionesModelo::create($request->all());
-        return redirect()->route('notificaciones.index')->with('success','Notificacion Registrada en la Plataforma');
+        return redirect()->route('notificaciones.index')->with('success','Notificación Registrada en la Plataforma');
     }
 
-    //Udate
+    // Update
     public function update(Request $request, $Codigo_Notificaciones){
         $request->validate([
-            'notificaciones' => 'required|unique:notificaciones,notificaciones,'. $Codigo_Notificaciones . ',notificaciones',
+            // La validación debe ser contra el campo 'Tipo_Notificacion'
+            'Tipo_Notificacion' => 'required|unique:notificaciones,Tipo_Notificacion,' . $Codigo_Notificaciones . ',Codigo_Notificaciones',
             
         ],[
-            'Codigo_Notificacion.unique' => 'La notificacion de este tipo ya existe en la plataforma.',
+            'Tipo_Notificacion.unique' => 'La Notificación de este tipo ya existe en la plataforma.',
         ]);
-        $Comentario = NotificacionesModelo::findOrFail($Codigo_Notificaciones);
-        $Comentario->update([
-            'Codigo_Notificaciones' => $request->Codigo_Notificaciones,
+        
+        $notificacion = NotificacionesModelo::findOrFail($Codigo_Notificaciones);
+        $notificacion->update([
+            // No se debe actualizar la clave primaria (Codigo_Notificaciones)
             'Tipo_Notificacion' => $request->Tipo_Notificacion,
             
         ]);
-           return redirect()->route('notificaciones.index')->with('success','Notificacion Actualizada en la Plataforma');
+        return redirect()->route('notificaciones.index')->with('success','Notificación Actualizada en la Plataforma');
 
     }
     // Eliminar
-public function destroy($id)
-{
-    $Comentario = NotificacionesModelo::findOrFail($id);
-    $Comentario->delete();
+    public function destroy($id)
+    {
+        $notificacion = NotificacionesModelo::findOrFail($id);
+        $notificacion->delete();
 
-    return redirect()->route('notificacion.index')->with('success', 'Notificacion eliminada correctamente');
-}
+        // Corregida la ruta de redirección a 'notificaciones.index'
+        return redirect()->route('notificaciones.index')->with('success', 'Notificación eliminada correctamente');
+    }
 }
