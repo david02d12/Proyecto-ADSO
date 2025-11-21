@@ -284,7 +284,12 @@
             <h1 style="color:white;">Seleccione un Modulo</h1>
             <a href="{{ route('usuario.index') }}" class="btn" style="color:white;">Ir a Usuarios</a><br>
             <a href="{{ route('producto.index') }}" class="btn" style="color:white;">Ir a Productos</a><br>
-            <a href="{{ route('comentarios.index') }}" class="btn" style="color:white;">Ir comentarios</a><br>
+            <a href="{{ route('comentarios.index') }}" class="btn" style="color:white;">Ir Comentarios</a><br>
+            <a href="{{ route('servicio.index') }}" class="btn" style="color:white;">Ir Servicio</a><br>
+            <a href="{{ route('notificaciones.index') }}" class="btn" style="color:white;">Ir Notificaciones</a><br>
+            <a href="{{ route('historial.index') }}" class="btn" style="color:white;">Ir Historial</a><br>
+            <a href="{{ route('chat.index') }}" class="btn" style="color:white;">Ir chat</a><br>
+            <a href="{{ route('categoria.index') }}" class="btn" style="color:white;">Ir Categoria</a><br>
            
         </div>
   </div>

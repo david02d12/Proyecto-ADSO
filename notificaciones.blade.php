@@ -10,23 +10,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    {{-- BARRA DE NAVEGACIÓN (Tomada del ejemplo) --}}
-    <nav class="navbar navbar-expand-lg" style="background-color: #d20000ff;">
-        <div class="container-fluid">
-            {{-- Botón para Offcanvas (Menú Lateral) --}}
-            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="outline: none; box-shadow: none; border-color: transparent;background-color: #1c1c1cff">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <h1 style="color: white;">Celuaccel</h1>
-                </div>
-            </div>
-        </div>
-    </nav>
+ <!--Barra de navegacion de arriba-->
+<nav class="navbar navbar-expand-lg" style="background-color: #d20000ff;">
+  <div class="container-fluid">
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="outline: none; box-shadow: none; border-color: transparent;background-color: #1c1c1cff">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <h1 style="color: white;">Celuaccel</h1>
+      </div>
+    </div>
+  </div>
+</nav>
 
     <div class="container-sm d-flex justify-content-center mt-5">
         <div class="card">
@@ -212,23 +211,7 @@
         </div>
     </div>
     
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="background-color:#1c1c1cff">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" style="color:white;" id="offcanvasExampleLabel">Menú</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="container mt-5">
-                <h1 style="color:white;">Seleccione un Modulo</h1>
-                {{-- Asegúrate de que estas rutas existen en tu archivo web.php --}}
-                <a href="{{ route('usuario.index') }}" class="btn" style="color:white;">Ir a Usuarios</a><br>
-                <a href="{{ route('producto.index') }}" class="btn" style="color:white;">Ir a Productos</a><br>
-                <a href="{{ route('comentarios.index') }}" class="btn" style="color:white;">Ir a Comentarios</a><br>
-                <a href="{{ route('notificaciones.index') }}" class="btn" style="color:white;">Ir a Notificaciones</a><br>
-            </div>
-        </div>
-    </div>
-    
+
     {{-- Incluye Bootstrap 5 JS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
@@ -268,5 +251,26 @@
     </script>
 </body>
 </html>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="background-color:#1c1c1cff">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" style="color:white;" id="offcanvasExampleLabel">Menú</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+        <div class="container mt-5">
+            <h1 style="color:white;">Seleccione un Modulo</h1>
+            <a href="{{ route('usuario.index') }}" class="btn" style="color:white;">Ir a Usuarios</a><br>
+            <a href="{{ route('producto.index') }}" class="btn" style="color:white;">Ir a Productos</a><br>
+            <a href="{{ route('comentarios.index') }}" class="btn" style="color:white;">Ir Comentarios</a><br>
+            <a href="{{ route('servicio.index') }}" class="btn" style="color:white;">Ir Servicio</a><br>
+            <a href="{{ route('notificaciones.index') }}" class="btn" style="color:white;">Ir Notificaciones</a><br>
+            <a href="{{ route('historial.index') }}" class="btn" style="color:white;">Ir Historial</a><br>
+            <a href="{{ route('chat.index') }}" class="btn" style="color:white;">Ir chat</a><br>
+            <a href="{{ route('categoria.index') }}" class="btn" style="color:white;">Ir Categoria</a><br>
+           
+        </div>
+  </div>
+</div>
 
 
