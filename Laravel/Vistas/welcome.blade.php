@@ -387,4 +387,4 @@ editarModal.addEventListener('show.bs.modal', function (event) {
             <a href="{{ route('usuario.index') }}" class="btn" style="color:white;"><i class="fa-solid fa-users"></i> Ir a Usuarios</a><br>
         </div>
   </div>
-</div>
+</div> 
