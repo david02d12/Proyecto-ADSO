@@ -1,14 +1,7 @@
-# Proyecto ADSO: prototipo de CeluAccel
+# Proyecto ADSO
 
-Prototipo inicial de **CeluAccel**, el sistema de gestión de reparación de celulares desarrollado en el Tecnólogo en Análisis y Desarrollo de Software del SENA.
+Primer prototipo de CeluAccel, el proyecto que desarrollamos en el Tecnólogo en Análisis y Desarrollo de Software del SENA.
 
-Este repositorio guarda la primera etapa del proyecto:
+Aquí quedaron las pantallas que diseñamos al principio en HTML para los tres tipos de usuario (cliente, técnico y administrador): registro, catálogo, solicitudes de reparación, seguimiento del estado, historial y mensajes. También están los primeros controladores y modelos en Laravel para productos, comentarios y notificaciones.
 
-- **Prototipo de interfaz (HTML):** vistas para los tres roles del sistema (cliente, técnico y administrador): registro e inicio de sesión, catálogo de productos, solicitudes de servicio, seguimiento del estado de la reparación, historial y mensajería.
-- **Módulos en Laravel (PHP + Blade):** controladores y modelos de productos, comentarios y notificaciones.
-
-La versión completa del proyecto, con API REST en Node.js/Express, frontend en React, app móvil en Kotlin y pruebas E2E, está en **[celuaccel](https://github.com/david02d12/celuaccel)**.
-
-## Tecnologías
-
-HTML · CSS · PHP · Laravel · Blade
+Después el proyecto se rehízo en Node.js y React. La versión actual está en [celuaccel](https://github.com/david02d12/celuaccel).
